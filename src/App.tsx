@@ -1,26 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Card from "./components/Card";
+import Chip from "./components/Chip";
+import Balloons from "./components/Balloons";
+import DropDown from "./components/DropDown";
 
-function App() {
+import "./App.css";
+
+export default function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h4>Contact Chip Component</h4>
+      <Chip avatar="images/avatar.jpeg" />
+
+      <h4>Card Component</h4>
+
+      <Card image="images/forest" />
+
+      <h4>Ballons Component</h4>
+
+      <Balloons element="Show Ballon" />
+
+      <h4>Dropdown Component</h4>
+
+      <DropDown
+        options={[
+          { label: "one", value: 1 },
+          { label: "two", value: 2 },
+          { label: "three", value: 3 },
+        ]}
+        label={"label"}
+      />
     </div>
   );
 }
-
-export default App;
